@@ -25,7 +25,7 @@ def agregar_contactos(contactos):
     
     print("contacto agregado")
     
-
+# No muestra mensaje cuando no hay contactos y no existe el archivo
 def mostrar_contactos():
     if not os.path.exists(nombre_archivo):
         print("No hay contactos guardados.")
@@ -43,6 +43,8 @@ def mostrar_contactos():
     for nombre, telefono, correo in contactos:
         print(f"Nombre: {nombre}\n" f"Teléfono: {telefono}\n" f"Correo: {correo}\n")
 
+# No existe control cuando no existen contactos
+# Si no encuentra al contacto muestra si/no, pero no vuelve al menu princiapal
 def buscar_contactos():
     print("Buscar contactos:")
     nombre_a_buscar = input("Ingrese el nombre del contacto a buscar: ")
@@ -59,6 +61,7 @@ def buscar_contactos():
     
     buscar_contactos()  # Llamar a la función otra vez para buscar otro contacto
 
+#elimina siempre cuando cuidide el caso del nombre
 def eliminar_contactos():
     if not os.path.exists(nombre_archivo):
         print("\nNo hay contactos para eliminar.\n")
