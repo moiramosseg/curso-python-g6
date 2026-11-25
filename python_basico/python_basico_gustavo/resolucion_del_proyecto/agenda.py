@@ -12,7 +12,7 @@ def agregar_contactos(contactos):
     nombre = str(input())
     print("ingresa el número de teléfono")
     while True:
-        try:
+        try: 
             telefono = int(input())
             break
         except ValueError:
